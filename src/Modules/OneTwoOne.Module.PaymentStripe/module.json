@@ -1,0 +1,6 @@
+{
+  "id": "OneTwoOne.Module.PaymentStripe",
+  "name": "Stripe Payment",
+  "isBundledWithHost": true,
+  "version": "1.0.0"
+}

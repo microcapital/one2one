@@ -1,0 +1,146 @@
+[
+  {
+    "id": "OneTwoOne.Module.ActivityLog",
+    "version": "1.0.0"
+  },
+  {
+    "id": "OneTwoOne.Module.Catalog",
+    "version": "1.0.0"
+  },
+  {
+    "id": "OneTwoOne.Module.Cms",
+    "version": "1.0.0"
+  },
+  {
+    "id": "OneTwoOne.Module.Comments",
+    "version": "1.0.0"
+  },
+  {
+    "id": "OneTwoOne.Module.Contacts",
+    "version": "1.0.0"
+  },
+  {
+    "id": "OneTwoOne.Module.Core",
+    "version": "1.0.0"
+  },
+  {
+    "id": "OneTwoOne.Module.DinkToPdf",
+    "version": "1.0.0"
+  },
+  {
+    "id": "OneTwoOne.Module.EmailSenderSmtp",
+    "version": "1.0.0"
+  },
+  {
+    "id": "OneTwoOne.Module.Inventory",
+    "version": "1.0.0"
+  },
+  {
+    "id": "OneTwoOne.Module.Localization",
+    "version": "1.0.0"
+  },
+  {
+    "id": "OneTwoOne.Module.News",
+    "version": "1.0.0"
+  },
+  {
+    "id": "OneTwoOne.Module.Orders",
+    "version": "1.0.0"
+  },
+  {
+    "id": "OneTwoOne.Module.PaymentBraintree",
+    "version": "1.0.0"
+  },
+  {
+    "id": "OneTwoOne.Module.PaymentCoD",
+    "version": "1.0.0"
+  },
+  {
+    "id": "OneTwoOne.Module.PaymentPaypalExpress",
+    "version": "1.0.0"
+  },
+  {
+    "id": "OneTwoOne.Module.Payments",
+    "version": "1.0.0"
+  },
+  {
+    "id": "OneTwoOne.Module.PaymentStripe",
+    "version": "1.0.0"
+  },
+  {
+    "id": "OneTwoOne.Module.PaymentMomo",
+    "version": "1.0.0"
+  },
+  {
+    "id": "OneTwoOne.Module.PaymentNganLuong",
+    "version": "1.0.0"
+  },
+  {
+    "id": "OneTwoOne.Module.PaymentCashfree",
+    "version": "1.0.0"
+  },
+  {
+    "id": "OneTwoOne.Module.Pricing",
+    "version": "1.0.0"
+  },
+  {
+    "id": "OneTwoOne.Module.ProductComparison",
+    "version": "1.0.0"
+  },
+  {
+    "id": "OneTwoOne.Module.ProductRecentlyViewed",
+    "version": "1.0.0"
+  },
+  {
+    "id": "OneTwoOne.Module.Reviews",
+    "version": "1.0.0"
+  },
+  {
+    "id": "OneTwoOne.Module.SampleData",
+    "version": "1.0.0"
+  },
+  {
+    "id": "OneTwoOne.Module.Search",
+    "version": "1.0.0"
+  },
+  {
+    "id": "OneTwoOne.Module.Shipments",
+    "version": "1.0.0"
+  },
+  {
+    "id": "OneTwoOne.Module.Shipping",
+    "version": "1.0.0"
+  },
+  {
+    "id": "OneTwoOne.Module.ShippingFree",
+    "version": "1.0.0"
+  },
+  {
+    "id": "OneTwoOne.Module.ShippingPrices",
+    "version": "1.0.0"
+  },
+  {
+    "id": "OneTwoOne.Module.ShippingTableRate",
+    "version": "1.0.0"
+  },
+  {
+    "id": "OneTwoOne.Module.ShoppingCart",
+    "version": "1.0.0"
+  },
+  {
+    "id": "OneTwoOne.Module.StorageLocal",
+    "version": "1.0.0"
+  },
+  {
+    "id": "OneTwoOne.Module.Tax",
+    "version": "1.0.0"
+  },
+  {
+    "id": "OneTwoOne.Module.Vendors",
+    "version": "1.0.0"
+  },
+  {
+    "id": "OneTwoOne.Module.WishList",
+    "version": "1.0.0"
+  }
+]

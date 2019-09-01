@@ -1,0 +1,12 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\OneTwoOne.Infrastructure\OneTwoOne.Infrastructure.csproj" />
+    <ProjectReference Include="..\OneTwoOne.Module.Catalog\OneTwoOne.Module.Catalog.csproj" />
+    <ProjectReference Include="..\OneTwoOne.Module.Core\OneTwoOne.Module.Core.csproj" />
+    <ProjectReference Include="..\OneTwoOne.Module.Pricing\OneTwoOne.Module.Pricing.csproj" />
+    <ProjectReference Include="..\OneTwoOne.Module.ShippingPrices\OneTwoOne.Module.ShippingPrices.csproj" />
+    <ProjectReference Include="..\OneTwoOne.Module.ShoppingCart\OneTwoOne.Module.ShoppingCart.csproj" />
+  </ItemGroup>
+
+</Project>

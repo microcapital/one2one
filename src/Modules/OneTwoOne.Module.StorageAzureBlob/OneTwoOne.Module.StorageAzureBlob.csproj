@@ -1,0 +1,9 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
+
+  <ItemGroup>
+    <PackageReference Include="WindowsAzure.Storage" version="9.3.3" />
+    <ProjectReference Include="..\..\OneTwoOne.Infrastructure\OneTwoOne.Infrastructure.csproj" />
+    <ProjectReference Include="..\OneTwoOne.Module.Core\OneTwoOne.Module.Core.csproj" />
+  </ItemGroup>
+
+</Project>

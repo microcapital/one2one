@@ -1,0 +1,79 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TaskFolder Condition=" '$(MSBuildRuntimeType)' == 'Core' ">netcoreapp2.0</TaskFolder>
+    <TaskFolder Condition=" '$(MSBuildRuntimeType)' != 'Core' ">net46</TaskFolder>
+  </PropertyGroup>
+  <UsingTask AssemblyFile="..\..\build\$(TaskFolder)\OneTwoOne.MSBuildTasks.dll" TaskName="CopyModuleTask" />
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <UserSecretsId>aspnet-Modular.WebHost-dca604fa-ee10-4a6c-8e7d-8cc79dca8c8f</UserSecretsId>
+    <EnableDefaultContentItems>false</EnableDefaultContentItems>
+    <MvcRazorCompileOnPublish>false</MvcRazorCompileOnPublish>
+    <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="wwwroot\**\*;modules.json;appsettings.json;Modules\**\*;Themes\**\*;Views\**\*">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Modules\OneTwoOne.Module.ActivityLog\OneTwoOne.Module.ActivityLog.csproj" />
+    <ProjectReference Include="..\Modules\OneTwoOne.Module.Catalog\OneTwoOne.Module.Catalog.csproj" />
+    <ProjectReference Include="..\Modules\OneTwoOne.Module.Cms\OneTwoOne.Module.Cms.csproj" />
+    <ProjectReference Include="..\Modules\OneTwoOne.Module.Comments\OneTwoOne.Module.Comments.csproj" />
+    <ProjectReference Include="..\Modules\OneTwoOne.Module.Contacts\OneTwoOne.Module.Contacts.csproj" />
+    <ProjectReference Include="..\Modules\OneTwoOne.Module.DinkToPdf\OneTwoOne.Module.DinkToPdf.csproj" />
+    <ProjectReference Include="..\Modules\OneTwoOne.Module.Inventory\OneTwoOne.Module.Inventory.csproj" />
+    <ProjectReference Include="..\Modules\OneTwoOne.Module.News\OneTwoOne.Module.News.csproj" />
+    <ProjectReference Include="..\Modules\OneTwoOne.Module.Orders\OneTwoOne.Module.Orders.csproj" />
+    <ProjectReference Include="..\Modules\OneTwoOne.Module.PaymentBraintree\OneTwoOne.Module.PaymentBraintree.csproj" />
+    <ProjectReference Include="..\Modules\OneTwoOne.Module.PaymentCashfree\OneTwoOne.Module.PaymentCashfree.csproj" />
+    <ProjectReference Include="..\Modules\OneTwoOne.Module.PaymentCoD\OneTwoOne.Module.PaymentCoD.csproj" />
+    <ProjectReference Include="..\Modules\OneTwoOne.Module.PaymentPaypalExpress\OneTwoOne.Module.PaymentPaypalExpress.csproj" />
+    <ProjectReference Include="..\Modules\OneTwoOne.Module.PaymentStripe\OneTwoOne.Module.PaymentStripe.csproj" />
+    <ProjectReference Include="..\Modules\OneTwoOne.Module.PaymentMomo\OneTwoOne.Module.PaymentMomo.csproj" />
+    <ProjectReference Include="..\Modules\OneTwoOne.Module.PaymentNganLuong\OneTwoOne.Module.PaymentNganLuong.csproj" />
+    <ProjectReference Include="..\Modules\OneTwoOne.Module.Payments\OneTwoOne.Module.Payments.csproj" />
+    <ProjectReference Include="..\Modules\OneTwoOne.Module.Pricing\OneTwoOne.Module.Pricing.csproj" />
+    <ProjectReference Include="..\Modules\OneTwoOne.Module.ProductComparison\OneTwoOne.Module.ProductComparison.csproj" />
+    <ProjectReference Include="..\Modules\OneTwoOne.Module.ProductRecentlyViewed\OneTwoOne.Module.ProductRecentlyViewed.csproj" />
+    <ProjectReference Include="..\Modules\OneTwoOne.Module.Reviews\OneTwoOne.Module.Reviews.csproj" />
+    <ProjectReference Include="..\Modules\OneTwoOne.Module.SampleData\OneTwoOne.Module.SampleData.csproj" />
+    <ProjectReference Include="..\Modules\OneTwoOne.Module.Search\OneTwoOne.Module.Search.csproj" />
+    <ProjectReference Include="..\Modules\OneTwoOne.Module.Shipments\OneTwoOne.Module.Shipments.csproj" />
+    <ProjectReference Include="..\Modules\OneTwoOne.Module.ShippingFree\OneTwoOne.Module.ShippingFree.csproj" />
+    <ProjectReference Include="..\Modules\OneTwoOne.Module.ShippingPrices\OneTwoOne.Module.ShippingPrices.csproj" />
+    <ProjectReference Include="..\Modules\OneTwoOne.Module.ShippingTableRate\OneTwoOne.Module.ShippingTableRate.csproj" />
+    <ProjectReference Include="..\Modules\OneTwoOne.Module.Shipping\OneTwoOne.Module.Shipping.csproj" />
+    <ProjectReference Include="..\Modules\OneTwoOne.Module.ShoppingCart\OneTwoOne.Module.ShoppingCart.csproj" />
+    <ProjectReference Include="..\Modules\OneTwoOne.Module.Tax\OneTwoOne.Module.Tax.csproj" />
+    <ProjectReference Include="..\Modules\OneTwoOne.Module.Vendors\OneTwoOne.Module.Vendors.csproj" />
+    <ProjectReference Include="..\Modules\OneTwoOne.Module.WishList\OneTwoOne.Module.WishList.csproj" />
+    <ProjectReference Include="..\OneTwoOne.Infrastructure\OneTwoOne.Infrastructure.csproj" />
+    <ProjectReference Include="..\Modules\OneTwoOne.Module.Core\OneTwoOne.Module.Core.csproj" />
+    <ProjectReference Include="..\Modules\OneTwoOne.Module.Localization\OneTwoOne.Module.Localization.csproj" />
+
+    <ProjectReference Include="..\Modules\OneTwoOne.Module.EmailSenderSmtp\OneTwoOne.Module.EmailSenderSmtp.csproj" />
+    <ProjectReference Include="..\Modules\OneTwoOne.Module.StorageLocal\OneTwoOne.Module.StorageLocal.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Serilog.Extensions.Logging" Version="2.0.4" />
+    <PackageReference Include="Serilog.Settings.Configuration" Version="3.1.0" />
+    <PackageReference Include="Serilog.Sinks.RollingFile" Version="3.3.1-dev-00767" />
+    <PackageReference Include="MediatR" Version="7.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.2.6" />
+    <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.7.1" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="4.0.1" />
+  </ItemGroup>
+
+  <Target Name="CopyModule" AfterTargets="Build">
+    <CopyModuleTask ProjectDir="$(ProjectDir)" TargetFramework="netcoreapp2.2" BuildConfiguration="$(ConfigurationName)" />
+  </Target>
+</Project>

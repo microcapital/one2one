@@ -1,0 +1,11 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
+  <PropertyGroup>
+    <PreserveCompilationContext>false</PreserveCompilationContext>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\OneTwoOne.Infrastructure\OneTwoOne.Infrastructure.csproj" />
+    <ProjectReference Include="..\OneTwoOne.Module.Core\OneTwoOne.Module.Core.csproj" />
+  </ItemGroup>
+
+</Project>

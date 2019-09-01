@@ -1,0 +1,6 @@
+{
+  "id": "OneTwoOne.Module.PaymentCoD",
+  "name": "CoD Payment",
+  "isBundledWithHost": true,
+  "version": "1.0.0"
+}

@@ -1,0 +1,36 @@
+FROM mcr.microsoft.com/dotnet/core/sdk:2.2.401 AS build-env
+  
+WORKDIR /app
+COPY . ./
+
+RUN sed -i 's#<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.2.6" />#<PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="2.2.6" />#' src/OneTwoOne.WebHost/OneTwoOne.WebHost.csproj
+RUN sed -i 's/UseSqlServer/UseSqlite/' src/OneTwoOne.WebHost/Program.cs
+RUN sed -i 's/UseSqlServer/UseSqlite/' src/OneTwoOne.WebHost/Extensions/ServiceCollectionExtensions.cs
+RUN sed -i 's/"DefaultConnection": ".*"/"DefaultConnection": "Data Source=OneTwoOne.db"/' src/OneTwoOne.WebHost/appsettings.json
+
+RUN rm src/OneTwoOne.WebHost/Migrations/*
+
+# ef core migrations run in debug, so we have to build in Debug for copying module correctly 
+RUN dotnet restore && dotnet build \
+    && cd src/OneTwoOne.WebHost \
+	&& dotnet ef migrations add initialSchema \
+    && dotnet ef database update
+
+RUN dotnet build -c Release \
+	&& cd src/OneTwoOne.WebHost \
+	&& dotnet build -c Release \
+	&& dotnet publish -c Release -o out
+
+FROM mcr.microsoft.com/dotnet/core/aspnet:2.2.6
+
+RUN apt-get update \
+	&& apt-get install libgdiplus -y \
+	&& rm -rf /var/lib/apt/lists/*
+
+WORKDIR /app	
+COPY --from=build-env /app/src/OneTwoOne.WebHost/out ./
+COPY --from=build-env /app/src/OneTwoOne.WebHost/OneTwoOne.db ./
+
+RUN curl -SL "https://github.com/rdvojmoc/DinkToPdf/raw/v1.0.8/v0.12.4/64%20bit/libwkhtmltox.so" --output ./libwkhtmltox.so
+
+ENTRYPOINT ["dotnet", "OneTwoOne.WebHost.dll"]

@@ -1,0 +1,11 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\OneTwoOne.Infrastructure\OneTwoOne.Infrastructure.csproj" />
+    <ProjectReference Include="..\OneTwoOne.Module.Core\OneTwoOne.Module.Core.csproj" />
+    <ProjectReference Include="..\OneTwoOne.Module.Orders\OneTwoOne.Module.Orders.csproj" />
+    <ProjectReference Include="..\OneTwoOne.Module.Payments\OneTwoOne.Module.Payments.csproj" />
+    <PackageReference Include="Stripe.net" Version="22.8.0" />
+  </ItemGroup>
+
+</Project>

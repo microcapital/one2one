@@ -1,0 +1,7 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\OneTwoOne.Infrastructure\OneTwoOne.Infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>
