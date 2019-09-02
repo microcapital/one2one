@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/OneTwoOne/OneTwoOne"
+    "url": "https://github.com/microcapital/one2one"
   },
   "keywords": [
     "ecommerce",
@@ -29,9 +29,9 @@
     "angularjs",
     "entity-framework-core"
   ],
-  "author": "Thien Nguyen Le Quynh",
+  "author": "MicroCap",
   "contributors": [
-    "OneTwoOne contributors"
+    "MicroCap contributors"
   ],
   "license": "Apache License 2.0"
 }
